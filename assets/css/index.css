@@ -1,5 +1,7 @@
 /* brand color */
-
+/* body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+} */
 :root{
     --first:#e35a37;
     --second:#3d61ad;
@@ -7,6 +9,7 @@
 
 section{
     padding: 5vh;
+    /* border: 1px solid black; */
 }
 
 body{
@@ -45,8 +48,14 @@ body{
 header{
     box-shadow: 10px 9px 33px -24px rgba(0,0,0,.76);
     width: 100%;
-    /* position: fixed;
-    z-index: 10; */
+    position: fixed;
+    z-index: 10;
+}
+
+header .secondnav{
+  position: sticky;
+  /* z-index: 10;
+  top: 1px; */
 }
 header>nav .firstnav  ul{
     list-style: none;
@@ -61,6 +70,9 @@ header>nav .firstnav .quas_header_right .quasquas-social-icons{
     align-items: center;
 }
 
+i{
+  font-size: 300px; 
+}
 
 header>nav .firstnav{
     width: 100%;
@@ -126,6 +138,7 @@ header>nav .firstnav .quas_header_right .dropdown a:hover{
 
 section#hero {
     padding: 5vh;
+    padding-top: 190px;
 }
 
 #hero{
@@ -176,25 +189,53 @@ width: 40%;
 
 
 
+#clients{
+  background-color: var(--second);
+}
 
-#hero #hero-clients{
-    padding-top: 5vh;
+#hero-clients{
+    /* padding-top: 5vh; */
     position: relative;
     width: 90%;
     height: auto;
     display: flex;
     margin: auto;
+    background-color: #EDEADE;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 20px rgba(209,211,224,0.3) ;
+}
+#hero-clients:hover{
+  background-color: white;
 }
 
-#hero #hero-clients .hero-clients-img{
+#hero-clients .hero-clients-img{
 margin: auto;
 filter: grayscale(100%);
+transition: all 500ms ease-in-out ;
+width: 130px;
 }
 
-#hero #hero-clients .hero-clients-img:hover{
+#hero-clients .hero-clients-img:hover{
     filter: grayscale(0%);
+    scale:1.1;
     }
 
+  
+  #hero .taglines div{
+    width: 250px;
+    height: 50px;
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 16px;
+    /* background-color: var(--second); */
+    /* color: white; */
+    border-left: 2px solid var(--first);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
 
@@ -207,7 +248,7 @@ filter: grayscale(100%);
     border: 1px solid rgba(0,0,0,0.1);
     width: 95%;
     margin: 20px auto;
-    box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding:0%;
     
@@ -280,6 +321,328 @@ filter: grayscale(100%);
 /*modal end  */
 
 
+/* Our courses */
+
+section#ourcourse{
+    background-color: #fff;
+}
+
+
+.course-filters{
+  /* box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4); */
+  width: 100%;
+  height: 70px;
+}
+.course-filters div {
+  box-shadow: 0 2px 8px 0 rgba(227, 170, 55, 0.4);
+  border-radius: 10px;
+    font-size: 20px; 
+    padding: 10px 20px; 
+    border-bottom: 1px solid transparent;
+    transition: all 200ms ease-in-out;
+  }
+
+  .course-filters div:hover{
+    border-bottom: 1px solid var(--first);
+    color: var(--first);
+    cursor: pointer;
+  }
+  /* swiper course */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper{
+    margin: 0px;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ecf1f5; */
+  }
+  .swiper-slide-active{
+    width: 20%;
+  }
+
+  .swiper-slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .swiper-slide .card{
+    width: 350px;
+    height: auto;
+    margin: auto;
+    box-shadow:2px 2px 20px rgba(0,0,0,0.2);
+    border:none; 
+    transition: all 400ms ease-in-out;
+     margin-top: 16px;
+      margin-bottom: 10px;
+  }
+  .swiper-slide .card a{
+    width: 40%;
+    display: inline-block;
+  }
+  .swiper-slide .card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px 0 rgba(227, 170, 55, 0.4);
+  }
+
+  .swiper-slide .card img{
+    height: 200px;
+    object-fit: fill;
+    width: 350px;
+    height: 152px;
+  }
+
+ 
+
+  .swiper-slide .card-content{
+    height: 300px;
+    width: 98%;
+    margin: auto;
+    background-color: #EDEADE;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  /* Custom Next Button */
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5);; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Border radius */
+}
+
+/* Custom Prev Button */
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5); /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Border radius */
+}
+
+  
+  /* swiper course end */
+
+
+/* Our courses end */
+
+/* carrierpath */
+
+#carrierpath img{
+    width: 100%;
+}
+
+#carrierpath h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* carrierpath end*/
+
+/* course benefits */
+/* .heading h1 {
+  /* color: #fff; */
+  /* font-size: 18px; */
+  /* text-transform: uppercase; 
+  font-weight: 600;
+  border-bottom: 5px solid var(--first);
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  margin-top: 15px
+} */
+
+.heading-text{
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 5px solid var(--first);
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  margin-top: 15px
+}
+
+.services-list {
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 0 0 27px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(227, 170, 55, 0.4);
+  height: 215px;
+  background-color: #fff;
+  overflow: hidden;
+}
+/* end course benefits */
+
+
+
+/* faq  */
+
+   .faq .content {
+    padding: 60px 100px 0 100px;
+  }
+  
+  .faq .content h3 {
+    font-weight: 400;
+    font-size: 34px;
+    color: #fff;
+  }
+  
+  .faq .content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  
+  .faq .content p {
+    font-size: 15px;
+    color: #848484;
+  }
+  
+  .faq .img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .faq .accordion-list {
+    padding: 0 10px 60px 10px;
+  }
+  
+  .faq .accordion-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .faq .accordion-list li+li {
+    margin-top: 15px;
+  }
+  
+  .faq .accordion-list li {
+    padding: 20px;
+    background:#fff;
+    border-radius: 4px;
+    /* border: 4px solid var(--second); */
+    z-index: 10;
+    box-shadow: 2px 2px 20px rgba(209,211,224,0.3) ;
+
+  }
+
+
+  
+  .faq .accordion-list a {
+    display: block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-right: 30px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .faq .accordion-list span {
+    color: var(--first);
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 10px;
+  }
+  
+  .faq .accordion-list i {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .faq .accordion-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+  }
+  
+  .faq .accordion-list .icon-show {
+    display: none;
+  }
+  
+  .faq .accordion-list a.collapsed {
+    color: black;
+  }
+  
+  .faq .accordion-list a.collapsed:hover {
+    color: var(--first);
+  }
+  
+  .faq .accordion-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  
+  .faq .accordion-list a.collapsed .icon-close {
+    display: none;
+  }
+  
+  @media (max-width: 1024px) {
+  
+    .faq .content,
+    .faq .accordion-list {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #faq{
+      background-color: #ecf1f5;
+    }
+    .faq .img {
+      min-height: 400px;
+    }
+  
+    .faq .content {
+      padding-top: 0px;
+      padding-bottom: 30px;
+    }
+  
+    .faq .accordion-list {
+      padding-bottom: 30px;
+    }
+    
+  }
+  
+  @media (max-width: 575px) {
+    .faq .img {
+      min-height: 200px;
+    }
+  }
+  
+
+
+/* faq end */
+
+
+/* footer */
+footer{
+  background-color: var(--second);
+  width: 100%;
+  height: 20vh;
+}
+
+/* footer end */
 
 
 
